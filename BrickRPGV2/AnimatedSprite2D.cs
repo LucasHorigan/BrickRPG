@@ -1,24 +1,24 @@
-﻿
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
+using System.Threading.Tasks;
 
-namespace TextureAtlas
+namespace BrickRPGV2
 {
-    public class AnimatedSprite
+    class AnimatedSprite2D
     {
-         Texture2D Texture { get; set; }
+        public Texture2D Texture { get; set; }
         public int Rows { get; set; }
         public int Columns { get; set; }
         private int currentFrame;
         private int totalFrames;
-		
-        public AnimatedSprite(Texture2D tex, int rows, int columns)
+
+        public AnimatedSprite2D(Texture2D texture, int rows, int columns)
         {
-            Texture = tex;
+            Texture = texture;
             Rows = rows;
             Columns = columns;
             currentFrame = 0;
