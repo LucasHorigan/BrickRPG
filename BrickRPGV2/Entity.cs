@@ -23,11 +23,12 @@ namespace BrickRPGV2
             Sprite.Update();
         }
 
-        public void Draw(SpriteBatch screen)
+        public void Draw(SpriteBatch screen, Vector2 offset)
         {
             Sprite.Draw(screen,
                         Position,
                         Rotation);
+
         }
 
         public void Move(Vector2 movement)
