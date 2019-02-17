@@ -45,6 +45,7 @@ namespace BrickRPGV2
         public void loadContent(ContentManager manager)
         {
             InsidePawn = new AnimatedSprite2D(manager.Load<Texture2D>("Sprite-Ricky-Idle"),1,7);
+            Sprite = InsidePawn;
         }
     }
 

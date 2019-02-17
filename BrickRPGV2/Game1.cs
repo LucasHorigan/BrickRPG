@@ -7,8 +7,11 @@ namespace BrickRPGV2
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
+    /// 
     public class Game1 : Game
     {
+        public Bricky brick;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -26,8 +29,7 @@ namespace BrickRPGV2
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
+            brick = new Bricky();
             base.Initialize();
         }
 
@@ -37,6 +39,7 @@ namespace BrickRPGV2
         /// </summary>
         protected override void LoadContent()
         {
+            brick.loadContent(Content);
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -59,6 +62,7 @@ namespace BrickRPGV2
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            brick.Update();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -73,6 +77,7 @@ namespace BrickRPGV2
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            brick.Draw(spriteBatch);
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
