@@ -1,22 +1,35 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-namespace Characters
+
+namespace BrickRPGV2
 {
     public class Entity
     {
-        public Vector2 position;
-        private Texture2D image;
-        public Entity(Vector2 location, Texture2D sprite)
+        public Vector2 Position;
+        public AnimatedSprite2D Sprite;
+
+        public Entity() { }
+
+        public Entity(Vector2 location, AnimatedSprite2D sprite)
         {
-            position = location;
-            image = sprite;
+            Position = location;
+            Sprite = sprite;
         }
-        public void draw(SpriteBatch screen)
+
+        public void Update()
         {
-            screen.Begin();
-            screen.Draw(image, position, Color.White);
-            screen.End();
+            Sprite.Update();
+        }
+
+        public void Draw(SpriteBatch screen)
+        {
+            Sprite.Draw(screen, Position);
+        }
+
+        public void Move(Vector2 movement)
+        {
+            Position += movement;
         }
     }
 }

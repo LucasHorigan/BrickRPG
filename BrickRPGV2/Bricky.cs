@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace BrickRPGV2
 {
-    class Bricky
+    public class Bricky : Entity
     {
         // Main attributes
-        public AnimatedSprite2D TopDownPawn; // change to Entity TODO
-        public AnimatedSprite2D InsidePawn; // change to Entity TODO
+        public AnimatedSprite2D TopDownPawn;
+        public AnimatedSprite2D InsidePawn;
+        ContentManager contentManager;
         public bool IsInside;
         public float GPA;
         public float Stamina;
@@ -29,24 +31,20 @@ namespace BrickRPGV2
 
         public Bricky()
         {
-            //init TopDownPawn
-            //init InsidePawn
+            Position = new Vector2(0, 0);
+            Sprite = InsidePawn;
+
             GPA = 4.0f;
             Stamina = 100;
             IsInside = true;
-            coffees = 0f;
-            energyDrinks = 0f;
+            coffees = 0;
+            energyDrinks = 0;
             keyboard = false;
         }
 
-        public void Update()
+        public void loadContent(ContentManager manager)
         {
-
-        }
-
-        public void Draw()
-        {
-
+            InsidePawn = new AnimatedSprite2D(manager.Load<Texture2D>("Sprite-Ricky-Idle"),1,7);
         }
     }
 
