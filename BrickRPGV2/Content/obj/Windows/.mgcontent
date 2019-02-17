@@ -4,8 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Jake Mekker/Documents/GitHub/BrickRPG/BrickRPGV2/Content/Sprite-Ricky-Idle.png</File>
-    <File>C:/Users/Jake Mekker/Documents/GitHub/BrickRPG/BrickRPGV2/Content/Map.png</File>
-    <File>C:/Users/Jake Mekker/Documents/GitHub/BrickRPG/BrickRPGV2/Content/Sprite-Ricky-TopDown.png</File>
+    <File>C:/Users/Lucas/Desktop/BrickRPG-master/BrickRPG/BrickRPGV2/Content/Sprite-Ricky-Idle.png</File>
+    <File>C:/Users/Lucas/Desktop/BrickRPG-master/BrickRPG/BrickRPGV2/Content/Map.png</File>
+    <File>C:/Users/Lucas/Desktop/BrickRPG-master/BrickRPG/BrickRPGV2/Content/Sprite-Ricky-TopDown.png</File>
+    <File>C:/Users/Lucas/Desktop/BrickRPG-master/BrickRPG/BrickRPGV2/Content/devil.png</File>
   </SourceFiles>
 </SourceFileCollection>

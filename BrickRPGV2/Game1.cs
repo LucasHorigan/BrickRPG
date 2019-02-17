@@ -17,14 +17,15 @@ namespace BrickRPGV2
 
         public Bricky brick;
         public Entity map;
-
+        public Camera2D camera;
+         
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.ToggleFullScreen();
+           // graphics.ToggleFullScreen();
             //graphics.PreferredBackBufferWidth = 900;
             //graphics.PreferredBackBufferHeight = 600;
             graphics.ApplyChanges();
@@ -41,6 +42,7 @@ namespace BrickRPGV2
         {
             brick = new Bricky();
             map = new Entity();
+            camera = new Camera2D();
             base.Initialize();
         }
 
@@ -56,8 +58,9 @@ namespace BrickRPGV2
             brick.loadContent(Content);
             brick.Position = new Vector2(graphics.PreferredBackBufferWidth/2,
                                             graphics.PreferredBackBufferHeight/2);
+            camera.Position = new Vector2(0, 0);
             brick.Position -= (brick.Sprite.getSize() / 2);
-            
+            map.Position = new Vector2(0, 0);
             map.Sprite = new AnimatedSprite2D(Content.Load<Texture2D>("map"),1,1);
         }
 
@@ -75,39 +78,50 @@ namespace BrickRPGV2
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Update(GameTime gameTime)
         {
             brick.Update();
-            
             Vector2 velocity = new Vector2(0,0);
 
+           // Vector2 position = new Vector2(0, 0);
             //UP
             if (Keyboard.GetState().IsKeyDown(Keys.W))
             {
                 velocity.Y -= 1;
+                brick.Position.Y -= 1;
             }
             //DOWN
             if (Keyboard.GetState().IsKeyDown(Keys.S))
             {
                 velocity.Y += 1;
+                brick.Position.Y += 1;
             }
             //LEFT
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
                 velocity.X -= 1;
+                brick.Position.X -= 1;
             }
             //RIGHT
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 velocity.X += 1;
+                brick.Position.X += 1;
             }
 
             //RUN
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift))
             {
                 velocity *= 2.5f;
+                brick.Position.Y += 1;
+                map.Position.Y += 1;
             }
 
+            camera.Position = Vector2.Lerp(camera.Position, brick.Position, 1);
+            Console.WriteLine("Camera Position is: {0} , {1}", camera.Position.X, camera.Position.Y);
+            //what the fuck did you just fucking do-- why cant you make a function god dammit reeeeeeeeeeeeeeeeeeeee
+            // you should never have this many if statements V
             if (velocity.X == 1 && velocity.Y == 0) { brick.Rotation = 0f; }
             else if (velocity.X == 1 && velocity.Y == 1) { brick.Rotation = 3.14159f / 4f; }
             else if (velocity.X == 0 && velocity.Y == 1) { brick.Rotation = 2f * 3.14159f / 4f; }
@@ -118,7 +132,8 @@ namespace BrickRPGV2
             else if (velocity.X == 1 && velocity.Y == -1) { brick.Rotation = 7f * 3.14159f / 4f; }
 
             velocity.Normalize();
-            map.Move(-velocity*0.0f);
+            //Console.WriteLine("velocity is: {0} {1}", velocity.X, velocity.Y);
+           // map.Move(-velocity*1.0f);
 
             //EXIT
             if (Keyboard.GetState().IsKeyDown(Keys.Escape)){Exit();}
@@ -133,10 +148,19 @@ namespace BrickRPGV2
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.White);
-            map.Draw(spriteBatch);
-            brick.Draw(spriteBatch);
+            Vector2 offset = new Vector2(graphics.PreferredBackBufferWidth/2,
+                                            graphics.PreferredBackBufferHeight/2) - brick.Position;
+            spriteBatch.Begin(SpriteSortMode.Texture, null, null, null, null, null, Matrix.CreateTranslation(brick.Position.X, brick.Position.Y, 0));
+            spriteBatch.Draw(Texture,
+                             destinationRectangle,
+                             sourceRectangle,
+                             Color.White,
+                             rotation,
+                             getSize() / 2,
+                             SpriteEffects.None,
+                             1);
 
-            // TODO: Add your drawing code here
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

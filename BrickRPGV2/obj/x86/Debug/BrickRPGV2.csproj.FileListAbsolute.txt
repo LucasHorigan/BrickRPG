@@ -102,3 +102,6 @@ C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPG
 C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.pdb
 C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Map.xnb
 C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Sprite-Ricky-TopDown.xnb
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Map.xnb
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Sprite-Ricky-TopDown.xnb
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\devil.xnb

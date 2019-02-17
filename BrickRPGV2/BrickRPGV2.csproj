@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AnimatedSprite2D.cs" />
     <Compile Include="Bricky.cs" />
+    <Compile Include="Camera.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
