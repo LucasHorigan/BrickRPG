@@ -1,13 +1,14 @@
-﻿using Characters;
+﻿
 namespace BrickRPGV2
 {
-    interface Weapon
+    interface Melee
     {
         int attack(Entity e);
         void drainMana(Entity e);
         bool hitOrMiss(Entity e);
     }
-    interface Shield
+
+    interface Ranged
     {
         int defend(Entity e);
         bool blockChance(Entity e);

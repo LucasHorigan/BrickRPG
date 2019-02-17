@@ -79,7 +79,7 @@ namespace BrickRPGV2
         {
             brick.Update();
             
-            Vector2 velocity = new Vector2(0,0);
+            Vector2 velocity = new Vector2(0f,0f);
 
             //UP
             if (Keyboard.GetState().IsKeyDown(Keys.W))
@@ -117,9 +117,14 @@ namespace BrickRPGV2
             else if (velocity.X == 0 && velocity.Y == -1) { brick.Rotation = 6f * 3.14159f / 4f; }
             else if (velocity.X == 1 && velocity.Y == -1) { brick.Rotation = 7f * 3.14159f / 4f; }
 
-            velocity.Normalize();
-            map.Move(-velocity*0.0f);
+            //velocity.Normalize();
 
+            //map.Move(-velocity*0.0f);
+            //brick.Position.X += 1f * velocity.X;// velocity.X;
+            //brick.Position.Y += 1f;// velocity.Y;
+            //brick.Position = Vector2.Add(brick.Position, velocity);
+            brick.Move(velocity.X,velocity.Y);
+            
             //EXIT
             if (Keyboard.GetState().IsKeyDown(Keys.Escape)){Exit();}
 
@@ -133,9 +138,14 @@ namespace BrickRPGV2
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.White);
+            spriteBatch.Begin(SpriteSortMode.Texture,
+                              null, null, null, null, null,
+                              Matrix.CreateTranslation(brick.Position.X, brick.Position.Y, 0));
+            
             map.Draw(spriteBatch);
             brick.Draw(spriteBatch);
-
+            
+            spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);

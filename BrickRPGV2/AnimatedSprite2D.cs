@@ -42,7 +42,7 @@ namespace BrickRPGV2
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Texture,
                              destinationRectangle,
                              sourceRectangle,
@@ -51,7 +51,7 @@ namespace BrickRPGV2
                              getSize()/2,
                              SpriteEffects.None,
                              1);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public Vector2 getSize()

@@ -35,5 +35,11 @@ namespace BrickRPGV2
             //Position.X += movement.X * 0f;
             //Position.Y += movement.Y * 0f;
         }
+
+        public void Move(float dX, float dY)
+        {
+            Position.X += dX;
+            Position.Y += dY;
+        }
     }
 }
