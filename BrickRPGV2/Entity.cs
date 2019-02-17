@@ -24,7 +24,7 @@ namespace BrickRPGV2
 
         public void Draw(SpriteBatch screen)
         {
-            Sprite.Draw(screen, Position);
+            Sprite.Draw(screen, Position+Game1.CameraPawnOffset);
         }
 
         public void Move(Vector2 movement)

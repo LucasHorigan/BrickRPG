@@ -10,7 +10,10 @@ namespace BrickRPGV2
     /// 
     public class Game1 : Game
     {
+        public static Vector2 CameraPawnOffset = new Vector2();
+
         public Bricky brick;
+        public Entity map;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -30,6 +33,7 @@ namespace BrickRPGV2
         protected override void Initialize()
         {
             brick = new Bricky();
+            map = new Entity();
             base.Initialize();
         }
 
@@ -39,10 +43,12 @@ namespace BrickRPGV2
         /// </summary>
         protected override void LoadContent()
         {
-            brick.loadContent(Content);
+            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            brick.loadContent(Content);
+            map.Sprite = new AnimatedSprite2D(Content.Load<Texture2D>("map"),1,1);
             // TODO: use this.Content to load your game content here
         }
 
@@ -63,9 +69,35 @@ namespace BrickRPGV2
         protected override void Update(GameTime gameTime)
         {
             brick.Update();
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
 
+            float velocity = 4.0f;
+
+            //RUN
+            if (Keyboard.GetState().IsKeyDown(Keys.LeftShift))
+            {
+                velocity = 16.0f;
+            }
+
+            //UP
+            if (Keyboard.GetState().IsKeyDown(Keys.W))
+            {
+                brick.Move(new Vector2(0,-velocity));
+            }
+            //DOWN
+            if (Keyboard.GetState().IsKeyDown(Keys.S))
+            {
+                brick.Move(new Vector2(0, velocity));
+            }
+            //LEFT
+            if (Keyboard.GetState().IsKeyDown(Keys.A))
+            {
+                brick.Move(new Vector2(-velocity, 0));
+            }
+            //RIGHT
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+                brick.Move(new Vector2(velocity, 0));
+            }
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -77,8 +109,9 @@ namespace BrickRPGV2
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            GraphicsDevice.Clear(Color.White);
+            map.Draw(spriteBatch);
             brick.Draw(spriteBatch);
-            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
 
