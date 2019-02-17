@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace BrickRPGV2
 {
@@ -11,6 +12,8 @@ namespace BrickRPGV2
     public class Game1 : Game
     {
         public static Vector2 CameraPawnOffset = new Vector2();
+        public static Vector2 CameraPosition = new Vector2();
+        public static Vector2 MapCameraPosition = new Vector2();
 
         public Bricky brick;
         public Entity map;
@@ -21,6 +24,10 @@ namespace BrickRPGV2
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.ToggleFullScreen();
+            //graphics.PreferredBackBufferWidth = 900;
+            //graphics.PreferredBackBufferHeight = 600;
+            graphics.ApplyChanges();
             Content.RootDirectory = "Content";
         }
 
@@ -43,13 +50,15 @@ namespace BrickRPGV2
         /// </summary>
         protected override void LoadContent()
         {
-            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             brick.loadContent(Content);
+            brick.Position = new Vector2(graphics.PreferredBackBufferWidth/2,
+                                            graphics.PreferredBackBufferHeight/2);
+            brick.Position -= (brick.Sprite.getSize() / 2);
+            
             map.Sprite = new AnimatedSprite2D(Content.Load<Texture2D>("map"),1,1);
-            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>
@@ -69,36 +78,50 @@ namespace BrickRPGV2
         protected override void Update(GameTime gameTime)
         {
             brick.Update();
-
-            float velocity = 4.0f;
-
-            //RUN
-            if (Keyboard.GetState().IsKeyDown(Keys.LeftShift))
-            {
-                velocity = 16.0f;
-            }
+            
+            Vector2 velocity = new Vector2(0,0);
 
             //UP
             if (Keyboard.GetState().IsKeyDown(Keys.W))
             {
-                brick.Move(new Vector2(0,-velocity));
+                velocity.Y -= 1;
             }
             //DOWN
             if (Keyboard.GetState().IsKeyDown(Keys.S))
             {
-                brick.Move(new Vector2(0, velocity));
+                velocity.Y += 1;
             }
             //LEFT
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                brick.Move(new Vector2(-velocity, 0));
+                velocity.X -= 1;
             }
             //RIGHT
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                brick.Move(new Vector2(velocity, 0));
+                velocity.X += 1;
             }
-            // TODO: Add your update logic here
+
+            //RUN
+            if (Keyboard.GetState().IsKeyDown(Keys.LeftShift))
+            {
+                velocity *= 2.5f;
+            }
+
+            if (velocity.X == 1 && velocity.Y == 0) { brick.Rotation = 0f; }
+            else if (velocity.X == 1 && velocity.Y == 1) { brick.Rotation = 3.14159f / 4f; }
+            else if (velocity.X == 0 && velocity.Y == 1) { brick.Rotation = 2f * 3.14159f / 4f; }
+            else if (velocity.X == -1 && velocity.Y == 1) { brick.Rotation = 3f * 3.14159f / 4f; }
+            else if (velocity.X == -1 && velocity.Y == 0) { brick.Rotation = 4f * 3.14159f / 4f; }
+            else if (velocity.X == -1 && velocity.Y == -1) { brick.Rotation = 5f * 3.14159f / 4f; }
+            else if (velocity.X == 0 && velocity.Y == -1) { brick.Rotation = 6f * 3.14159f / 4f; }
+            else if (velocity.X == 1 && velocity.Y == -1) { brick.Rotation = 7f * 3.14159f / 4f; }
+
+            velocity.Normalize();
+            map.Move(-velocity*0.0f);
+
+            //EXIT
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape)){Exit();}
 
             base.Update(gameTime);
         }

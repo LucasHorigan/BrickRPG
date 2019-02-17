@@ -8,8 +8,9 @@ namespace BrickRPGV2
     {
         public Vector2 Position;
         public AnimatedSprite2D Sprite;
+        public float Rotation;
 
-        public Entity() { }
+        public Entity() { Position = new Vector2(0, 0); }
 
         public Entity(Vector2 location, AnimatedSprite2D sprite)
         {
@@ -24,12 +25,15 @@ namespace BrickRPGV2
 
         public void Draw(SpriteBatch screen)
         {
-            Sprite.Draw(screen, Position+Game1.CameraPawnOffset);
+            Sprite.Draw(screen,
+                        Position,
+                        Rotation);
         }
 
         public void Move(Vector2 movement)
         {
-            Position += movement;
+            //Position.X += movement.X * 0f;
+            //Position.Y += movement.Y * 0f;
         }
     }
 }

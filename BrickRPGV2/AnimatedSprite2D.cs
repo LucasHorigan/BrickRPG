@@ -32,7 +32,7 @@ namespace BrickRPGV2
                 currentFrame = 0;
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch, Vector2 location, float rotation = 0f)
         {
             int width = Texture.Width / Columns;
             int height = Texture.Height / Rows;
@@ -43,8 +43,22 @@ namespace BrickRPGV2
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.Draw(Texture,
+                             destinationRectangle,
+                             sourceRectangle,
+                             Color.White,
+                             rotation,
+                             getSize()/2,
+                             SpriteEffects.None,
+                             1);
             spriteBatch.End();
+        }
+
+        public Vector2 getSize()
+        {
+            return new Vector2(
+                        Texture.Width / Columns,
+                        Texture.Height / Rows);
         }
     }
 }

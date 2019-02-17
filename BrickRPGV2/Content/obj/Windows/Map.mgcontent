@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/Jake Mekker/Documents/GitHub/BrickRPG/BrickRPGV2/Content/Map.png</SourceFile>
-  <SourceTime>2019-02-16T21:33:35.2183576-05:00</SourceTime>
+  <SourceTime>2019-02-16T22:47:53.6605665-05:00</SourceTime>
   <DestFile>C:/Users/Jake Mekker/Documents/GitHub/BrickRPG/BrickRPGV2/Content/bin/Windows/Map.xnb</DestFile>
-  <DestTime>2019-02-16T21:39:36.6230428-05:00</DestTime>
+  <DestTime>2019-02-16T22:48:04.8851314-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T10:05:36-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

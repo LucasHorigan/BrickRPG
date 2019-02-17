@@ -31,9 +31,6 @@ namespace BrickRPGV2
 
         public Bricky()
         {
-            Position = new Vector2(0, 0);
-            Sprite = InsidePawn;
-
             GPA = 4.0f;
             Stamina = 100;
             IsInside = true;
@@ -44,8 +41,8 @@ namespace BrickRPGV2
 
         public void loadContent(ContentManager manager)
         {
-            InsidePawn = new AnimatedSprite2D(manager.Load<Texture2D>("Sprite-Ricky-Idle"),1,7);
-            Sprite = InsidePawn;
+            TopDownPawn = new AnimatedSprite2D(manager.Load<Texture2D>("Sprite-Ricky-TopDown"),1,10);
+            Sprite = TopDownPawn;
         }
     }
 
