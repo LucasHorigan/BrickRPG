@@ -41,12 +41,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AnimatedSprite1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AnimatedSprite.cs</DependentUpon>
-    </Compile>
+    <Compile Include="AnimatedSprite2D.cs" />
     <Compile Include="Bricky.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,10 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimatedSprite.cs">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AnimatedSprite1.cs</LastGenOutput>
-    </Compile>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -48,3 +48,56 @@ C:\Users\OWNER\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csproj.CoreCompileIn
 C:\Users\OWNER\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csproj.CopyComplete
 C:\Users\OWNER\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.exe
 C:\Users\OWNER\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.pdb
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Sprite-Ricky-Idle.xnb
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\BrickRPGV2.exe
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\BrickRPGV2.pdb
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csproj.CopyComplete
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.exe
+C:\Users\Lucas\Desktop\BrickRPG-master\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.pdb
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Sprite-Ricky-Idle.xnb
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\BrickRPGV2.exe
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\BrickRPGV2.pdb
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csprojAssemblyReference.cache
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csproj.CoreCompileInputs.cache
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.csproj.CopyComplete
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.exe
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\obj\x86\Debug\BrickRPGV2.pdb
+C:\Users\Jake Mekker\Documents\GitHub\BrickRPG\BrickRPGV2\bin\Windows\x86\Debug\Content\Map.xnb

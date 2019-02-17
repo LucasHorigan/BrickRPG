@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BrickRPGV2
 {
-    class AnimatedSprite2D
+    public class AnimatedSprite2D
     {
         public Texture2D Texture { get; set; }
         public int Rows { get; set; }
